@@ -13,10 +13,20 @@
 <body>
     <div class="bg-glow"></div>
 
+    <nav>
+        <a href="#" class="nav-logo">Create Military</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#downloads">Downloads</a>
+            <a href="#requirements">Requirements</a>
+            <a href="https://t.co/zqeoH78h7c" target="_blank">Discord</a>
+        </div>
+    </nav>
+
     <header>
         <div class="header-content">
-            <h1>Create Military Department</h1>
-            <p class="hero-subtitle">Engineering the future of warfare with Create and Military modding. Build, automate, and dominate.</p>
+            <h1>Create Military <br>Department</h1>
+            <p class="hero-subtitle">Engineering the future of warfare with Create and Military modding. Build, automate, and dominate the skies and the land.</p>
             <div class="cta-group">
                 <a href="#downloads" class="btn btn-primary">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -32,7 +42,7 @@
 
     <main class="container">
         <!-- What is this section -->
-        <section id="about">
+        <section id="about" class="reveal">
             <div class="section-header">
                 <h2>What we are doing</h2>
                 <p>私たちは、Minecraft の可能性を広げるために、軍事と工学を融合させた最高のエクスペリエンスを構築しています。</p>
@@ -63,7 +73,7 @@
         </section>
 
         <!-- Downloads Section -->
-        <section id="downloads" class="version-section">
+        <section id="downloads" class="version-section reveal">
             <div class="section-header">
                 <h2>
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
@@ -77,24 +87,67 @@
                  </div>
             </div>
         </section>
+
+        <!-- Requirements Section -->
+        <section id="requirements" class="reveal">
+            <div class="section-header">
+                <h2>System Requirements</h2>
+                <p>快適なプレイのために推奨される動作環境です。</p>
+            </div>
+            <div class="req-grid">
+                <div class="req-item">
+                    <span>Memory (RAM)</span>
+                    <strong>6GB - 8GB Recommended</strong>
+                </div>
+                <div class="req-item">
+                    <span>Java Version</span>
+                    <strong>Java 17 (Eclipse Temurin)</strong>
+                </div>
+                <div class="req-item">
+                    <span>Game Version</span>
+                    <strong>Minecraft 1.20.1</strong>
+                </div>
+                <div class="req-item">
+                    <span>Mod Loader</span>
+                    <strong>Forge 47.3.0</strong>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="container">
+        <div class="container reveal">
             <div class="discord-cta">
                 <h3>Join the Department</h3>
                 <p>設計図の共有、共同開発、マルチプレイへの参加はこちらから。</p>
-                <div style="margin-top: 1.5rem;">
+                <div style="margin-top: 2rem;">
                     <a href="https://t.co/zqeoH78h7c" class="btn btn-discord" target="_blank">
                         Join Our Community
                     </a>
                 </div>
             </div>
             <p>&copy; 2024 AshViper / Create Military Department Team</p>
-            <p style="margin-top: 0.5rem; opacity: 0.6; font-size: 0.8rem;">Minecraft and the Minecraft logo are trademarks of Mojang Synergies AB. This site is not affiliated with Mojang.</p>
+            <p style="margin-top: 1rem; opacity: 0.6; font-size: 0.85rem;">Minecraft and the Minecraft logo are trademarks of Mojang Synergies AB. This site is not affiliated with Mojang.</p>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        // Scroll Reveal Script
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Initial check
+        reveal();
+    </script>
 </body>
 </html>
