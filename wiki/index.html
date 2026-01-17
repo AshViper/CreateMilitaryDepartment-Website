@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Index - Create Military Department</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .wiki-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .wiki-card {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav>
+        <a href="../index.html" class="nav-logo">Create Military</a>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="index.html" style="color: white;">Wiki</a>
+            <a href="../gallery/index.html">Gallery</a>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 10rem;">
+        <div class="section-header">
+            <h1>Department Wiki</h1>
+            <p>知識を武器に。ブロックの仕様から高度な制御まで、開発に必要なすべてを網羅します。</p>
+        </div>
+
+        <div class="wiki-grid">
+            <a href="blocks.html" class="feature-card wiki-card reveal">
+                <div class="feature-icon">📦</div>
+                <h3>Blocks & Tech</h3>
+                <p>追加される特殊ブロックの性能、接続、使用方法についてのデータベース。</p>
+            </a>
+            <a href="lua-guide.html" class="feature-card wiki-card reveal">
+                <div class="feature-icon">📜</div>
+                <h3>Lua Programming</h3>
+                <p>ComputerCraft や制御用モッドで使用する Lua 言語の基礎から応用まで。</p>
+            </a>
+            <a href="../gallery/index.html" class="feature-card wiki-card reveal">
+                <div class="feature-icon">🖼️</div>
+                <h3>Gallery</h3>
+                <p>コミュニティによって生み出された驚異的な兵器たちの展示場。</p>
+            </a>
+        </div>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 150) { reveals[i].classList.add("active"); }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lua Coding Guide - Create Military Department</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .code-block {
+            background: #020617;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            font-family: 'Courier New', Courier, monospace;
+            color: #10b981;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+        .guide-content { max-width: 800px; margin: 0 auto; }
+        .guide-content h2 { margin: 3rem 0 1rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 0.5rem; }
+        .guide-content p { margin-bottom: 1.5rem; color: var(--text-secondary); }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <nav>
+        <a href="../index.html" class="nav-logo">Create Military</a>
+        <div class="nav-links">
+            <a href="index.html">Wiki Index</a>
+            <a href="lua-guide.html" style="color: white;">Lua Guide</a>
+        </div>
+    </nav>
+
+    <main class="container" style="padding-top: 10rem;">
+        <div class="guide-content reveal">
+            <h1>Lua Programming for Beginners</h1>
+            <p>この Modpack では、ComputerCraft や周辺モッドを使用して、兵器の自動制御やレーダーシステムの構築が可能です。その心臓部となる Lua 言語を学びましょう。</p>
+
+            <h2>1. 変数とデータ型</h2>
+            <p>値を保存するための「箱」です。</p>
+            <div class="code-block">
+                local ammoCount = 50 -- 数値<br>
+                local weaponName = "Railgun" -- 文字列<br>
+                local isActive = true -- 真偽値
+            </div>
+
+            <h2>2. 条件分岐 (If文)</h2>
+            <p>状況に応じて動きを変えます。</p>
+            <div class="code-block">
+                if ammoCount > 0 then<br>
+                &nbsp;&nbsp;print("Fire!")<br>
+                else<br>
+                &nbsp;&nbsp;print("Reload necessary!")<br>
+                end
+            </div>
+
+            <h2>3. ループ (制御の反復)</h2>
+            <p>索敵や給弾を繰り返す際に使用します。</p>
+            <div class="code-block">
+                while true do<br>
+                &nbsp;&nbsp;local target = findTarget()<br>
+                &nbsp;&nbsp;if target then track(target) end<br>
+                &nbsp;&nbsp;sleep(0.1) -- サーバーの負荷を抑えるために重要<br>
+                end
+            </div>
+
+            <div class="discord-cta" style="margin-top: 5rem;">
+                <h3>Need Help?</h3>
+                <p>より高度なスクリプトや、兵器制御モジュールの使い方は Discord で質問してください。</p>
+                <a href="https://t.co/zqeoH78h7c" class="btn btn-discord" target="_blank" style="margin-top:1rem">Join Discord</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) { reveals[i].classList.add("active"); }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+    </script>
+</body>
+</html>
