@@ -60,24 +60,16 @@
             <p>開発者たちが誇る自慢の兵器たち。設計のインスピレーションを得ましょう。</p>
         </div>
 
-        <div class="gallery-grid">
-            <!-- Example Item -->
-            <div class="gallery-item reveal">
-                <img src="../hero.png" alt="Weapon Image" class="gallery-img">
-                <div class="gallery-info">
-                    <span class="author-badge">Created by AshViper</span>
-                    <h3>Command Battleship "Vanguard"</h3>
-                    <p style="color:var(--text-secondary); font-size:0.9rem;">Create Modの物理エンジンをフル活用した動く司令拠点。</p>
-                </div>
-            </div>
-            <!-- More items can be added here -->
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Items loaded dynamically -->
              <div class="gallery-item reveal" style="display: flex; align-items: center; justify-content: center; min-height: 200px; border: 2px dashed var(--border);">
-                <p style="color:var(--text-secondary);">Your creation here...<br><small>Discordで投稿してください！</small></p>
+                <p style="color:var(--text-secondary); text-align: center;">Your creation here...<br><small>Discordで投稿してください！</small></p>
             </div>
         </div>
     </main>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/wiki-loader.js"></script>
     <script>
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");

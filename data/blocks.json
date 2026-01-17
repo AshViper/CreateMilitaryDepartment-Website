@@ -1,0 +1,16 @@
+[
+  {
+    "id": "gearbox",
+    "name": "Military Gearbox",
+    "icon": "⚙️",
+    "description": "高トルク・高回転に対応した軍用ギアボックス。大型砲塔の旋回を支えます。",
+    "specs": ["耐久値: 2500 (標準の3倍)", "最大許容応力: 1024su"]
+  },
+  {
+    "id": "steel_plate",
+    "name": "Reinforced Steel Plate",
+    "icon": "🛡️",
+    "description": "爆発耐性を持つ装甲板。車両の外装に使用します。",
+    "specs": ["爆発耐性: Lv.5", "重量: 重い（機動力に影響）"]
+  }
+]

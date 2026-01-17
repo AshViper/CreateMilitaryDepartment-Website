@@ -45,34 +45,13 @@
             <p>工廠を支える主要なコンポーネントの仕様解説。</p>
         </div>
 
-        <div class="block-list">
-            <div class="block-card reveal">
-                <div class="block-icon">⚙️</div>
-                <div>
-                    <h3>Military Gearbox</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">高トルク・高回転に対応した軍用ギアボックス。大型砲塔の旋回を支えます。</p>
-                    <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-left:1rem;">
-                        <li>耐久値: 2500 (標準の3倍)</li>
-                        <li>最大許容応力: 1024su</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="block-card reveal">
-                <div class="block-icon">🛡️</div>
-                <div>
-                    <h3>Reinforced Steel Plate</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">爆発耐性を持つ装甲板。車両の外装に使用します。</p>
-                    <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-left:1rem;">
-                        <li>爆発耐性: Lv.5</li>
-                        <li>重量: 重い（機動力に影響）</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="block-list" id="block-list">
+            <!-- Blocks loaded dynamically -->
         </div>
     </main>
 
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/wiki-loader.js"></script>
     <script>
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
