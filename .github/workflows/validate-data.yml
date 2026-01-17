@@ -1,0 +1,22 @@
+name: Validate Metadata
+on:
+  push:
+    paths:
+      - 'data/versions.json'
+  pull_request:
+    paths:
+      - 'data/versions.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JSON format
+        run: |
+          jq . data/versions.json > /dev/null
+          echo "JSON is valid."
+      - name: Verify fields
+        run: |
+          # 必須フィールドのチェック (latest_version 等)
+          jq -e '.latest_version and .versions' data/versions.json > /dev/null

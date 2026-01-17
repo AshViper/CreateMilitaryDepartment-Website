@@ -3,84 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Military Department | Modpack Server</title>
-    <meta name="description" content="最先端のモッドパックサーバー - Military Department。独自の技術とコミュニティで新たな体験を。">
-    
-    <!-- Fonts & Icons -->
+    <title>Create Military Department - Minecraft Modpack</title>
+    <meta name="description" content="Minecraft Create Mod を活用したミリタリー特化の Modpack 配布サイト。最新バージョンのダウンロードと変更点を確認できます。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="bg-glow"></div>
-    <div class="bg-grid"></div>
 
-    <header class="container">
-        <div class="tagline animate">Tactical Operations Command</div>
-        <h1 class="animate delay-1">Military<br>Department</h1>
-        <p class="description animate delay-2">
-            究極の没入感と戦略。専用のModpackと最適化されたサーバーで、これまでにない軍事シミュレーション体験を提供します。
-        </p>
-        <div class="cta-group animate delay-3">
-            <a href="zip/modpack_v1.0.0.zip" class="btn btn-primary">
-                <i class="fas fa-download"></i> Modpackをダウンロード
-            </a>
-            <a href="https://discord.gg/xxxxxxxx" target="_blank" class="btn btn-secondary">
-                <i class="fab fa-discord"></i> Discordに参加
-            </a>
+    <header>
+        <div class="header-content">
+            <h1>Create Military Department</h1>
+            <p class="hero-subtitle">Engineering the future of warfare with Create and Military modding. Latest: <span id="latest-version-text" style="color: var(--primary);">...</span></p>
         </div>
     </header>
 
     <main class="container">
-        <section class="section">
-            <div class="section-title">
-                <h2>Our Operations</h2>
-                <p class="description" style="margin: 0 auto;">Military Departmentが提供する独自のエクスペリエンス</p>
-            </div>
-            
-            <div class="grid-features">
-                <div class="card">
-                    <i class="fas fa-microchip"></i>
-                    <h3>高度な技術構成</h3>
-                    <p>厳選された150以上のModを独自に調整。パフォーマンスとゲームプレイのバランスを極限まで追求しました。</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-users-gear"></i>
-                    <h3>専門コミュニティ</h3>
-                    <p>戦術を重んじ、協力し合う成熟したコミュニティ。Discordでの連携、共同作戦、大規模演習が可能です。</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-shield-halved"></i>
-                    <h3>安定した稼働</h3>
-                    <p>24時間365日常時稼働。最新のハードウェアと専用回線により、低遅延で快適なプレイ環境を約束します。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" style="text-align: center;">
-            <div class="card" style="max-width: 800px; margin: 0 auto; border-color: var(--primary);">
-                <h3>準備はいいか？</h3>
-                <p style="margin: 1.5rem 0 2rem;">私たちは常に新しい隊員を求めています。最新のModpackをダウンロードし、ブリーフィング（Discord）に参加してください。</p>
-                <div class="cta-group">
-                    <a href="zip/modpack_v1.0.0.zip" class="btn btn-primary">即時展開を開始</a>
-                </div>
+        <section class="version-section">
+            <h2>
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                Available Versions
+            </h2>
+            <div id="version-list" class="version-list">
+                <!-- Versions will be loaded here via JS -->
+                 <div class="loading-state" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                    Loading metadata...
+                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Military Department Project. All Rights Reserved.</p>
-            <div style="margin-top: 1rem; font-size: 0.8rem;">
-                <a href="#" style="color: var(--text-muted); text-decoration: none; margin: 0 10px;">Privacy Policy</a>
-                <a href="#" style="color: var(--text-muted); text-decoration: none; margin: 0 10px;">Terms of Service</a>
-            </div>
-        </div>
+        <p>&copy; 2024 AshViper / Create Military Department Team</p>
+        <p style="margin-top: 0.5rem; opacity: 0.7;">This site is for distribution of Minecraft modded content.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
