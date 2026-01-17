@@ -1,16 +1,16 @@
 {
   "modpack_name": "Create Military Department",
   "repository": "https://github.com/AshViper/CreateMilitaryDepartment-Website",
-  "latest_version": "1.0.0",
+  "latest_version": "5.2.0",
   "versions": [
     {
-      "version": "1.0.0",
+      "version": "5.2.0",
       "mc_version": "1.20.1",
       "loader": "Forge 47.3.0",
       "release_tag": "Download",
       "file_name": "JPxAACreate_-5.2.0.zip",
-      "changelog": "Initial release including core military vehicles and artillery.",
-      "date": "2024-01-17"
+      "changelog": "Create Mod と軍事モッドを統合した最新安定版。300MB超の大規模な構成に対応。",
+      "date": "2026-01-17"
     }
   ]
 }
